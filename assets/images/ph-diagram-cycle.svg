@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="domeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc" />
+      <stop offset="100%" stop-color="#f1f5f9" />
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="500" rx="8" fill="#ffffff" stroke="#d0d7de" stroke-width="1" />
+
+  <!-- Graph Axes -->
+  <line x1="80" y1="440" x2="740" y2="440" stroke="#656d76" stroke-width="2" />
+  <line x1="80" y1="440" x2="80" y2="50" stroke="#656d76" stroke-width="2" />
+  
+  <!-- Axis Labels -->
+  <text x="410" y="475" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="13" font-weight="700" fill="#24292f">Enthalpy, h (kJ / kg)</text>
+  <text x="35" y="240" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="13" font-weight="700" fill="#24292f" transform="rotate(-90 35 240)">Pressure, P (log scale / kPa)</text>
+
+  <!-- Title -->
+  <text x="410" y="36" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="15" font-weight="800" fill="#24292f">THERMODYNAMIC PRESSURE-ENTHALPY (P-h) REFRIGERATION CYCLE</text>
+
+  <!-- Vapor Dome Curve -->
+  <path d="M140 440 C 180 320, 320 120, 420 120 C 520 120, 620 320, 680 440" fill="url(#domeGrad)" stroke="#94a3b8" stroke-width="2" stroke-dasharray="4,4" />
+  
+  <text x="210" y="320" font-family="monospace" font-size="11" fill="#64748b" transform="rotate(-55 210 320)">Saturated Liquid Line</text>
+  <text x="590" y="300" font-family="monospace" font-size="11" fill="#64748b" transform="rotate(50 590 300)">Saturated Vapour Line</text>
+  <text x="420" y="105" text-anchor="middle" font-family="monospace" font-size="11" font-weight="bold" fill="#475569">Critical Point</text>
+
+  <!-- High-Pressure Condensing Line (P_cond) -->
+  <line x1="80" y1="180" x2="720" y2="180" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="2,2" />
+  <text x="90" y="172" font-family="monospace" font-size="10" font-weight="bold" fill="#dc2626">High Side (P_cond)</text>
+
+  <!-- Low-Pressure Evaporating Line (P_evap) -->
+  <line x1="80" y1="360" x2="720" y2="360" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="2,2" />
+  <text x="90" y="352" font-family="monospace" font-size="10" font-weight="bold" fill="#0284c7">Low Side (P_evap)</text>
+
+  <!-- The 4-Stage Thermodynamic Cycle Loop -->
+  <!-- State 1: Compressor Inlet (Low P, Superheated Vapour) -->
+  <circle cx="610" cy="360" r="5" fill="#0284c7" />
+  <text x="625" y="365" font-family="monospace" font-size="12" font-weight="bold" fill="#0284c7">1 (Suction)</text>
+
+  <!-- 1 -> 2: Isentropic Compression -->
+  <path d="M610 360 L680 180" stroke="#dc2626" stroke-width="3" />
+  <polygon points="675,190 682,175 688,187" fill="#dc2626" />
+  <text x="660" y="270" font-family="sans-serif" font-size="11" font-weight="700" fill="#dc2626">1 &rarr; 2: Compressor</text>
+
+  <!-- State 2: Compressor Discharge (High P, Superheated Hot Gas) -->
+  <circle cx="680" cy="180" r="5" fill="#dc2626" />
+  <text x="695" y="175" font-family="monospace" font-size="12" font-weight="bold" fill="#dc2626">2 (Discharge)</text>
+
+  <!-- 2 -> 3: Condenser (De-superheating, Condensation & Subcooling) -->
+  <path d="M680 180 L230 180" stroke="#d97706" stroke-width="3" />
+  <polygon points="450,175 435,180 450,185" fill="#d97706" />
+  <text x="440" y="165" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="700" fill="#d97706">2 &rarr; 3: Condenser Heat Rejection (Q_out)</text>
+
+  <!-- State 3: Condenser Outlet (High P, Subcooled Liquid) -->
+  <circle cx="230" cy="180" r="5" fill="#d97706" />
+  <text x="175" y="175" font-family="monospace" font-size="12" font-weight="bold" fill="#d97706">3 (Liquid)</text>
+
+  <!-- 3 -> 4: Isenthalpic Expansion (Throttling Device) -->
+  <path d="M230 180 L230 360" stroke="#0284c7" stroke-width="3" />
+  <polygon points="225,270 230,285 235,270" fill="#0284c7" />
+  <text x="140" y="270" font-family="sans-serif" font-size="11" font-weight="700" fill="#0284c7">3 &rarr; 4: Expansion</text>
+
+  <!-- State 4: Evaporator Inlet (Low P, Cold Liquid/Vapour Mixture) -->
+  <circle cx="230" cy="360" r="5" fill="#0284c7" />
+  <text x="175" y="375" font-family="monospace" font-size="12" font-weight="bold" fill="#0284c7">4 (Flash Gas)</text>
+
+  <!-- 4 -> 1: Evaporator (Latent Boiling & Superheat) -->
+  <path d="M230 360 L610 360" stroke="#0284c7" stroke-width="3" />
+  <polygon points="430,355 445,360 430,365" fill="#0284c7" />
+  <text x="420" y="385" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="700" fill="#0284c7">4 &rarr; 1: Evaporator Heat Absorption (Q_in)</text>
+
+</svg>
