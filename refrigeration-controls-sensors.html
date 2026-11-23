@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Refrigeration Controls & Sensors: Pressure Switches, Transducers & Automation · Refrigeration Knowledge</title>
+  <meta name="description" content="Technical guide to refrigeration instrumentation. Dual pressure switches, pump-down controls, oil differential switches, NTC/PTC thermistors, and safety lockouts.">
+  <link rel="canonical" href="https://refrigeration-knowledge.github.io/refrigeration-controls-sensors/">
+  <meta name="robots" content="index, follow">
+  <meta name="google-site-verification" content="d2XJ1FMgx_y7H5DfcTfY6zHwQ06f4dKEdD9PmR1FQhw">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Refrigeration Controls & Sensors: Instrumentation & Automation Guide">
+  <meta property="og:description" content="Technical engineering manual on high/low pressure switches, pump-down cycles, oil safety controls, and microprocessor sensors.">
+  <meta property="og:url" content="https://refrigeration-knowledge.github.io/refrigeration-controls-sensors/">
+  <meta property="og:site_name" content="Refrigeration Knowledge">
+  <meta property="og:image" content="https://refrigeration-knowledge.github.io/assets/images/thermo-components.svg">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Refrigeration Instrumentation & Automation Manual">
+  <meta name="twitter:description" content="Engineering analysis of pressure cutouts, transducers, and safety control loops.">
+  <meta name="twitter:image" content="https://refrigeration-knowledge.github.io/assets/images/thermo-components.svg">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Docs Home", "item": "https://refrigeration-knowledge.github.io/" },
+          { "@type": "ListItem", "position": 2, "name": "Controls & Sensors", "item": "https://refrigeration-knowledge.github.io/refrigeration-controls-sensors/" }
+        ]
+      },
+      {
+        "@type": "Article",
+        "headline": "Refrigeration Controls and Sensors: Pressure Switches, Transducers and Automation",
+        "description": "Technical reference manual for refrigeration system instrumentation. Covers high/low dual pressure cutouts, pump-down solenoids, electronic transducers, and oil differential protection.",
+        "image": "https://refrigeration-knowledge.github.io/assets/images/thermo-components.svg",
+        "inLanguage": "en-AU",
+        "mainEntityOfPage": "https://refrigeration-knowledge.github.io/refrigeration-controls-sensors/",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Refrigeration Knowledge",
+          "url": "https://refrigeration-knowledge.github.io/"
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header class="doc-header">
+    <div class="container doc-header-inner">
+      <a href="/" class="brand-link" aria-label="Refrigeration Knowledge Home">
+        <div class="brand-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10M6 10h10"/></svg>
+        </div>
+        <div>
+          <span class="brand-title">Refrigeration Knowledge</span>
+          <span class="brand-version">v2.4 Docs</span>
+        </div>
+      </a>
+
+      <button class="mobile-toggle" aria-expanded="false" aria-controls="doc-sidebar-nav" aria-label="Toggle documentation navigation">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+
+      <nav class="doc-nav">
+        <ul class="nav-list">
+          <li><a href="/" class="nav-link">Docs</a></li>
+          <li><a href="/refrigeration-cycle/" class="nav-link">Cycle Analysis</a></li>
+          <li><a href="/about/" class="nav-link">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="doc-layout">
+      <!-- Documentation Sidebar -->
+      <aside id="doc-sidebar-nav" class="doc-sidebar" aria-label="Documentation Tree">
+        <div class="sidebar-group">
+          <div class="group-title">Thermodynamic Cycle</div>
+          <ul class="sidebar-links">
+            <li><a href="/refrigeration-cycle/" class="sidebar-link">Vapour-Compression Cycle</a></li>
+            <li><a href="/refrigeration-energy-efficiency/" class="sidebar-link">COP &amp; Energy Efficiency</a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-group">
+          <div class="group-title">Primary Components</div>
+          <ul class="sidebar-links">
+            <li><a href="/refrigeration-compressor/" class="sidebar-link">Compressors &amp; Pumping</a></li>
+            <li><a href="/condenser-vs-evaporator/" class="sidebar-link">Condensers vs Evaporators</a></li>
+            <li><a href="/refrigeration-expansion-devices/" class="sidebar-link">Expansion Devices (TXV/EEV)</a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-group">
+          <div class="group-title">Instrumentation &amp; Controls</div>
+          <ul class="sidebar-links">
+            <li><a href="/refrigeration-controls-sensors/" class="sidebar-link active">Controls &amp; Pressure Sensors</a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-group">
+          <div class="group-title">About This Documentation</div>
+          <ul class="sidebar-links">
+            <li><a href="/about/" class="sidebar-link">About This Resource</a></li>
+            <li><a href="/editorial-policy/" class="sidebar-link">Editorial Policy</a></li>
+            <li><a href="/contact/" class="sidebar-link">Technical Contact</a></li>
+          </ul>
+        </div>
+      </aside>
+
+      <!-- Main Documentation Article -->
+      <main id="main" class="doc-article">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <a href="/">Home</a>
+          <span>/</span>
+          <span class="current">Controls &amp; Sensors</span>
+        </nav>
+
+        <header class="doc-article-header">
+          <div class="doc-meta">
+            <span class="doc-badge">Electromechanical &amp; Digital Instrumentation</span>
+            <time datetime="2026-11-20">Updated November 2026</time>
+          </div>
+          <h1 class="doc-title">Refrigeration Controls and Sensors: Pressure Switches, Transducers and Automation</h1>
+          <p class="doc-lede">
+            A refrigeration circuit cannot operate safely without an integrated network of electromechanical and electronic safety controls. Sensors continually monitor pressures, temperatures, and fluid levels to maintain operational stability and protect expensive compressors against loss of charge, extreme head pressures, and oil starvation.
+          </p>
+        </header>
+
+        <div class="doc-body">
+          <h2 id="electromechanical-pressure-switches">Electromechanical Pressure Switches (Dual Pressure Controls)</h2>
+          <p>
+            The dual pressure switch (such as Danfoss KP15 or Ranco 012) combines both high-side and low-side bellows into a single robust housing wired in series with the compressor contactor coil:
+          </p>
+          <div class="table-responsive">
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">Control Section</th>
+                  <th scope="col">Primary Function</th>
+                  <th scope="col">Typical Settings (R134a)</th>
+                  <th scope="col">Reset Mechanism</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>High Pressure (HP) Cutout</td>
+                  <td>Protects against condenser fan failure, air obstruction, or overcharge</td>
+                  <td>Cut-out: 1600 kPa (230 psig)<br>Differential: Fixed 300 kPa</td>
+                  <td>Manual Reset (forces technician investigation after trip)</td>
+                </tr>
+                <tr>
+                  <td>Low Pressure (LP) Cutout</td>
+                  <td>Protects against loss of refrigerant, iced evaporator, or acts as thermostat</td>
+                  <td>Cut-out: 50 kPa (7 psig)<br>Cut-in: 200 kPa (29 psig)</td>
+                  <td>Auto Reset (initiates automated pump-down cycling)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2 id="the-automated-pump-down-cycle">The Automated Pump-Down Cycle</h2>
+          <p>
+            In commercial coolrooms and refrigeration systems, compressors are rarely cycled directly by a wall thermostat. Instead, an automated <em>pump-down control sequence</em> is employed to protect against off-cycle refrigerant migration:
+          </p>
+          <ol>
+            <li><strong>Thermostat satisfied:</strong> The temperature controller de-energises a normally-closed Liquid Line Solenoid Valve (LLSV) positioned immediately before the TXV.</li>
+            <li><strong>Refrigerant evacuates:</strong> The compressor continues running, pumping all liquid out of the evaporator and storing it safely in the condenser and liquid receiver.</li>
+            <li><strong>LP cutout activates:</strong> Once suction pressure drops below the low-pressure set point (e.g. 50 kPa), the LP switch opens its contact, shutting down the compressor.</li>
+            <li><strong>Off-cycle safety:</strong> During the off cycle, the low side remains dry, preventing liquid refrigerant from migrating into the cold compressor crankcase and condensing into the oil.</li>
+            <li><strong>Call for cooling:</strong> When the thermostat calls again, it re-opens the solenoid valve; refrigerant pressure surges into the low side, closing the LP switch and restarting the compressor without hard electrical inrush stress.</li>
+          </ol>
+
+          <h2 id="oil-differential-pressure-switches">Oil Differential Pressure Controls</h2>
+          <p>
+            In large semi-hermetic reciprocating and screw compressors equipped with positive-displacement oil pumps, lubrication failure can destroy crank bearings within 60 seconds.
+          </p>
+          <div class="callout-definition">
+            <strong>Net Oil Pressure Equation:</strong>
+            The mechanical switch measures the differential between oil pump discharge pressure and suction crankcase pressure:
+            <div class="callout-formula">Net Oil Pressure = P_oil_pump - P_crankcase</div>
+            If net oil pressure drops below 60 kPa (9 psi), an internal thermal bimetal heater begins counting down. If pressure is not restored within 90 to 120 seconds, the control trips out on mechanical lockout, stopping the compressor before catastrophic seizure occurs.
+          </div>
+
+          <h2 id="electronic-sensors-and-transducers">Electronic Sensors: NTC Thermistors &amp; Ratiometric Transducers</h2>
+          <p>
+            Modern microprocessor controllers (Carel, Dixell, Eliwell) replace mechanical bellows with electronic solid-state instrumentation:
+          </p>
+          <ul>
+            <li><strong>Negative Temperature Coefficient (NTC) Thermistors:</strong> Resistive sensors (typically 10k&Omega; at 25°C) providing &plusmn;0.2°C accuracy for cabinet air, defrost termination, and evaporator fin monitoring.</li>
+            <li><strong>Ratiometric Pressure Transducers:</strong> Piezo-resistive ceramic sensors powered by 5V DC, outputting a linear 0.5V to 4.5V analogue signal proportional to gauge pressure. Microprocessors sample this voltage every 100 milliseconds to calculate saturation temperature and drive electronic expansion valves (EEVs).</li>
+          </ul>
+
+
+          <h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
+          <h3>Why does a high-pressure cutout require a manual reset button?</h3>
+          <p>
+            An extreme high-pressure event indicates a dangerous condition—such as a seized condenser fan motor, water cooling failure, or severe overcharge. If the switch reset automatically, the compressor would continuously cycle on and off under extreme electrical stress until its internal motor windings melted.
+          </p>
+
+          <h3>What is the purpose of an electric crankcase heater?</h3>
+          <p>
+            Crankcase heaters keep the compressor oil sump 10°C to 15°C warmer than the coldest part of the refrigeration system during the off cycle. Refrigerant vapour naturally migrates and condenses into the coldest zone; keeping the oil warm prevents refrigerant from dissolving into the oil and causing destructive oil foaming on startup.
+          </p>
+        </div>
+      </main>
+
+      <!-- In-Page TOC (Right Sidebar) -->
+      <aside class="doc-toc" aria-label="On this page">
+        <div class="toc-title">On This Page</div>
+        <ul class="toc-list">
+          <li><a href="#electromechanical-pressure-switches">Dual Pressure Switches</a></li>
+          <li><a href="#the-automated-pump-down-cycle">Pump-Down Sequences</a></li>
+          <li><a href="#oil-differential-pressure-switches">Oil Safety Switches</a></li>
+          <li><a href="#electronic-sensors-and-transducers">Digital Transducers</a></li>
+          <li><a href="#frequently-asked-questions">FAQs</a></li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="doc-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2026 Refrigeration Knowledge · Technical Refrigeration Engineering Education.</p>
+      <a href="/editorial-policy/" style="color:var(--text-muted); text-decoration:underline;">Documentation Standards</a>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

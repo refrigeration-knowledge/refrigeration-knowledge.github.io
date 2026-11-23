@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Refrigeration Compressors: Types, Mechanics & Compression Ratios · Refrigeration Knowledge</title>
+  <meta name="description" content="Technical guide to refrigeration compressors: reciprocating, rotary, scroll, and screw architectures. Volumetric efficiency, compression ratios, and inverter controls.">
+  <link rel="canonical" href="https://refrigeration-knowledge.github.io/refrigeration-compressor/">
+  <meta name="robots" content="index, follow">
+  <meta name="google-site-verification" content="d2XJ1FMgx_y7H5DfcTfY6zHwQ06f4dKEdD9PmR1FQhw">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Refrigeration Compressors: Types, Mechanics & Compression Ratios">
+  <meta property="og:description" content="Engineering analysis of hermetic, semi-hermetic, and open refrigeration compressors. Pumping mechanics, oil management, and inverter drives.">
+  <meta property="og:url" content="https://refrigeration-knowledge.github.io/refrigeration-compressor/">
+  <meta property="og:site_name" content="Refrigeration Knowledge">
+  <meta property="og:image" content="https://refrigeration-knowledge.github.io/assets/images/thermo-components.svg">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Refrigeration Compressors Engineering Manual">
+  <meta name="twitter:description" content="Thermodynamics of refrigerant vapour compression, displacement volumes, and polytropic work.">
+  <meta name="twitter:image" content="https://refrigeration-knowledge.github.io/assets/images/thermo-components.svg">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Docs Home", "item": "https://refrigeration-knowledge.github.io/" },
+          { "@type": "ListItem", "position": 2, "name": "Compressors", "item": "https://refrigeration-knowledge.github.io/refrigeration-compressor/" }
+        ]
+      },
+      {
+        "@type": "Article",
+        "headline": "Refrigeration Compressors: Types, Mechanics and Compression Ratios",
+        "description": "Technical manual on refrigeration compressors. Examines reciprocating, rotary, scroll, and screw architectures, compression ratio limits, and polyolester oil circulation.",
+        "image": "https://refrigeration-knowledge.github.io/assets/images/thermo-components.svg",
+        "inLanguage": "en-AU",
+        "mainEntityOfPage": "https://refrigeration-knowledge.github.io/refrigeration-compressor/",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Refrigeration Knowledge",
+          "url": "https://refrigeration-knowledge.github.io/"
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header class="doc-header">
+    <div class="container doc-header-inner">
+      <a href="/" class="brand-link" aria-label="Refrigeration Knowledge Home">
+        <div class="brand-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10M6 10h10"/></svg>
+        </div>
+        <div>
+          <span class="brand-title">Refrigeration Knowledge</span>
+          <span class="brand-version">v2.4 Docs</span>
+        </div>
+      </a>
+
+      <button class="mobile-toggle" aria-expanded="false" aria-controls="doc-sidebar-nav" aria-label="Toggle documentation navigation">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+
+      <nav class="doc-nav">
+        <ul class="nav-list">
+          <li><a href="/" class="nav-link">Docs</a></li>
+          <li><a href="/refrigeration-cycle/" class="nav-link">Cycle Analysis</a></li>
+          <li><a href="/about/" class="nav-link">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="doc-layout">
+      <!-- Documentation Sidebar -->
+      <aside id="doc-sidebar-nav" class="doc-sidebar" aria-label="Documentation Tree">
+        <div class="sidebar-group">
+          <div class="group-title">Thermodynamic Cycle</div>
+          <ul class="sidebar-links">
+            <li><a href="/refrigeration-cycle/" class="sidebar-link">Vapour-Compression Cycle</a></li>
+            <li><a href="/refrigeration-energy-efficiency/" class="sidebar-link">COP &amp; Energy Efficiency</a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-group">
+          <div class="group-title">Primary Components</div>
+          <ul class="sidebar-links">
+            <li><a href="/refrigeration-compressor/" class="sidebar-link active">Compressors &amp; Pumping</a></li>
+            <li><a href="/condenser-vs-evaporator/" class="sidebar-link">Condensers vs Evaporators</a></li>
+            <li><a href="/refrigeration-expansion-devices/" class="sidebar-link">Expansion Devices (TXV/EEV)</a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-group">
+          <div class="group-title">Instrumentation &amp; Controls</div>
+          <ul class="sidebar-links">
+            <li><a href="/refrigeration-controls-sensors/" class="sidebar-link">Controls &amp; Pressure Sensors</a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-group">
+          <div class="group-title">About This Documentation</div>
+          <ul class="sidebar-links">
+            <li><a href="/about/" class="sidebar-link">About This Resource</a></li>
+            <li><a href="/editorial-policy/" class="sidebar-link">Editorial Policy</a></li>
+            <li><a href="/contact/" class="sidebar-link">Technical Contact</a></li>
+          </ul>
+        </div>
+      </aside>
+
+      <!-- Main Documentation Article -->
+      <main id="main" class="doc-article">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <a href="/">Home</a>
+          <span>/</span>
+          <span class="current">Compressors</span>
+        </nav>
+
+        <header class="doc-article-header">
+          <div class="doc-meta">
+            <span class="doc-badge">Mechanical Pumping Engineering</span>
+            <time datetime="2026-11-20">Updated November 2026</time>
+          </div>
+          <h1 class="doc-title">Refrigeration Compressors: Types, Mechanics and Compression Ratios</h1>
+          <p class="doc-lede">
+            The compressor is the heart of the vapour-compression refrigeration cycle. It functions as both a vapour pump to circulate refrigerant mass flow and a pressure-elevation machine that bridges the gap between low evaporating temperatures and high condensing temperatures.
+          </p>
+        </header>
+
+        <div class="doc-body">
+          <h2 id="compressor-architectures">Primary Compressor Mechanical Architectures</h2>
+          <div class="table-responsive">
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">Compressor Type</th>
+                  <th scope="col">Mechanical Principle</th>
+                  <th scope="col">Typical Applications</th>
+                  <th scope="col">Key Advantages</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Reciprocating (Piston)</td>
+                  <td>Crankshaft drives pistons in cylinders with reed suction and discharge valves</td>
+                  <td>Domestic refrigerators, small coolrooms, commercial freezers</td>
+                  <td>High pressure ratios, proven reliability, forgiving of oil return variations</td>
+                </tr>
+                <tr>
+                  <td>Rotary (Rolling Piston)</td>
+                  <td>Eccentric roller on a shaft rotating within a cylinder with sliding vane</td>
+                  <td>Domestic split systems, portable fridges, small reach-in units</td>
+                  <td>Compact physical footprint, minimal parts, quiet steady operation</td>
+                </tr>
+                <tr>
+                  <td>Scroll (Orbital Spiral)</td>
+                  <td>One fixed involute spiral scroll mesh with one orbiting scroll</td>
+                  <td>Commercial coolrooms, supermarket packs, large heat pumps</td>
+                  <td>Zero clearance volume loss, 100% volumetric efficiency, smooth discharge</td>
+                </tr>
+                <tr>
+                  <td>Screw (Helical Rotor)</td>
+                  <td>Male and female intermeshing helical rotors compressing gas axially</td>
+                  <td>Industrial cold stores, chilled water plants (&gt;100 kW)</td>
+                  <td>Continuous slide-valve capacity control (10% to 100%), extreme lifespan</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2 id="compression-ratio-and-volumetric-efficiency">Compression Ratio and Volumetric Efficiency</h2>
+          <div class="callout-definition">
+            <strong>Compression Ratio ($R_c$):</strong>
+            The ratio of absolute discharge pressure to absolute suction pressure:
+            <div class="callout-formula">R_c = P_discharge_(absolute) / P_suction_(absolute)</div>
+            <em>Note: Always calculate using absolute pressure (kPa gauge + 101.3 kPa).</em>
+          </div>
+          <p>
+            As the compression ratio increases (for example, in a low-temperature freezer operating at -25°C evaporating against a 40°C Australian summer condensing condition), volumetric efficiency declines rapidly.
+          </p>
+          <p>
+            In reciprocating compressors, high compression ratios cause high-pressure vapour trapped in the cylinder clearance volume to re-expand during the downward piston stroke, preventing fresh suction vapour from entering until the cylinder pressure drops below suction line pressure. When $R_c$ exceeds 9:1, two-stage compression or economised scroll circuits become necessary to prevent oil carbonisation.
+          </p>
+
+          <h2 id="oil-lubrication-and-miscibility">Refrigeration Oil Circulation &amp; Miscibility</h2>
+          <p>
+            Refrigeration compressors require constant lubrication of bearings, wrist pins, and scroll flanks. Unlike an automobile engine, a refrigeration compressor continuously discharges a fine mist of lubricating oil into the refrigerant stream:
+          </p>
+          <ul>
+            <li><strong>Refrigerant-Oil Miscibility:</strong> The oil (such as Polyolester / POE for HFCs/HFOs, or Polyvinyl Ether / PVE for R32/R410A) must remain miscible with liquid refrigerant at low evaporator temperatures so that oil washed into the coil can flow through suction risers back to the crankcase.</li>
+            <li><strong>Minimum Suction Velocity:</strong> Horizontal suction lines require at least 2.5 m/s refrigerant gas velocity, and vertical risers require 5.0 to 6.0 m/s with oil traps to lift oil against gravity.</li>
+          </ul>
+
+          <h2 id="inverter-variable-speed-technology">Inverter (BLDC) Modulation vs Fixed-Speed Cycles</h2>
+          <p>
+            Modern refrigeration compressors increasingly employ Brushless DC (BLDC) interior permanent magnet motors driven by Pulse Width Modulation (PWM) variable-frequency inverters.
+          </p>
+          <p>
+            Instead of brutal start-stop cycling that stresses mechanical bearings and causes temperature swings, inverter compressors dynamically modulate motor speed between 1,200 RPM and 4,500 RPM to precisely match thermal load. Learn how this drastically boosts system <a href="/refrigeration-energy-efficiency/">Refrigeration Energy Efficiency</a>.
+          </p>
+
+
+          <h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
+          <h3>What causes a compressor to 'slug'?</h3>
+          <p>
+            Slugging occurs when liquid refrigerant or massive slugs of liquid oil enter the compressor suction port. Because liquids are incompressible, the piston attempt to compress liquid generates extreme hydraulic pressures that shatter valve plates, bend connecting rods, and snap crankshafts.
+          </p>
+
+          <h3>Why does an inverter compressor run almost 24 hours a day?</h3>
+          <p>
+            Continuous operation at low speed (20Hz–30Hz) is an intentional design feature. Running continuously at low displacement consumes far less electrical energy than stopping and starting at 50Hz, while eliminating thermal cycling in the refrigerated space.
+          </p>
+        </div>
+      </main>
+
+      <!-- In-Page TOC (Right Sidebar) -->
+      <aside class="doc-toc" aria-label="On this page">
+        <div class="toc-title">On This Page</div>
+        <ul class="toc-list">
+          <li><a href="#compressor-architectures">Architectures</a></li>
+          <li><a href="#compression-ratio-and-volumetric-efficiency">Compression Ratios</a></li>
+          <li><a href="#oil-lubrication-and-miscibility">Oil Lubrication</a></li>
+          <li><a href="#inverter-variable-speed-technology">Inverter Drives</a></li>
+          <li><a href="#frequently-asked-questions">FAQs</a></li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="doc-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2026 Refrigeration Knowledge · Technical Refrigeration Engineering Education.</p>
+      <a href="/editorial-policy/" style="color:var(--text-muted); text-decoration:underline;">Documentation Standards</a>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

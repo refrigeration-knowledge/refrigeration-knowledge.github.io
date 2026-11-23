@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Refrigeration Expansion Devices: TXV, EEV & Capillary Tubes · Refrigeration Knowledge</title>
+  <meta name="description" content="Technical engineering guide to refrigeration metering devices. Thermostatic expansion valves (TXV), electronic expansion valves (EEV), capillary tubes, and isenthalpic expansion.">
+  <link rel="canonical" href="https://refrigeration-knowledge.github.io/refrigeration-expansion-devices/">
+  <meta name="robots" content="index, follow">
+  <meta name="google-site-verification" content="d2XJ1FMgx_y7H5DfcTfY6zHwQ06f4dKEdD9PmR1FQhw">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Refrigeration Expansion Devices: TXV, EEV & Capillary Tubes">
+  <meta property="og:description" content="Thermodynamics of throttling devices, superheat control, bulb charges, and electronic stepper motor expansion valves.">
+  <meta property="og:url" content="https://refrigeration-knowledge.github.io/refrigeration-expansion-devices/">
+  <meta property="og:site_name" content="Refrigeration Knowledge">
+  <meta property="og:image" content="https://refrigeration-knowledge.github.io/assets/images/thermo-components.svg">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Refrigeration Metering Devices Manual">
+  <meta name="twitter:description" content="Isenthalpic pressure reduction and mass flow metering in vapour-compression refrigeration systems.">
+  <meta name="twitter:image" content="https://refrigeration-knowledge.github.io/assets/images/thermo-components.svg">
+
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Docs Home", "item": "https://refrigeration-knowledge.github.io/" },
+          { "@type": "ListItem", "position": 2, "name": "Expansion Devices", "item": "https://refrigeration-knowledge.github.io/refrigeration-expansion-devices/" }
+        ]
+      },
+      {
+        "@type": "Article",
+        "headline": "Refrigeration Expansion Devices: TXV, EEV and Capillary Tube Engineering",
+        "description": "Technical analysis of refrigeration expansion and metering devices. Compares thermostatic expansion valves, electronic stepper valves, and capillary lines.",
+        "image": "https://refrigeration-knowledge.github.io/assets/images/thermo-components.svg",
+        "inLanguage": "en-AU",
+        "mainEntityOfPage": "https://refrigeration-knowledge.github.io/refrigeration-expansion-devices/",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Refrigeration Knowledge",
+          "url": "https://refrigeration-knowledge.github.io/"
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header class="doc-header">
+    <div class="container doc-header-inner">
+      <a href="/" class="brand-link" aria-label="Refrigeration Knowledge Home">
+        <div class="brand-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10M6 10h10"/></svg>
+        </div>
+        <div>
+          <span class="brand-title">Refrigeration Knowledge</span>
+          <span class="brand-version">v2.4 Docs</span>
+        </div>
+      </a>
+
+      <button class="mobile-toggle" aria-expanded="false" aria-controls="doc-sidebar-nav" aria-label="Toggle documentation navigation">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+
+      <nav class="doc-nav">
+        <ul class="nav-list">
+          <li><a href="/" class="nav-link">Docs</a></li>
+          <li><a href="/refrigeration-cycle/" class="nav-link">Cycle Analysis</a></li>
+          <li><a href="/about/" class="nav-link">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="doc-layout">
+      <!-- Documentation Sidebar -->
+      <aside id="doc-sidebar-nav" class="doc-sidebar" aria-label="Documentation Tree">
+        <div class="sidebar-group">
+          <div class="group-title">Thermodynamic Cycle</div>
+          <ul class="sidebar-links">
+            <li><a href="/refrigeration-cycle/" class="sidebar-link">Vapour-Compression Cycle</a></li>
+            <li><a href="/refrigeration-energy-efficiency/" class="sidebar-link">COP &amp; Energy Efficiency</a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-group">
+          <div class="group-title">Primary Components</div>
+          <ul class="sidebar-links">
+            <li><a href="/refrigeration-compressor/" class="sidebar-link">Compressors &amp; Pumping</a></li>
+            <li><a href="/condenser-vs-evaporator/" class="sidebar-link">Condensers vs Evaporators</a></li>
+            <li><a href="/refrigeration-expansion-devices/" class="sidebar-link active">Expansion Devices (TXV/EEV)</a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-group">
+          <div class="group-title">Instrumentation &amp; Controls</div>
+          <ul class="sidebar-links">
+            <li><a href="/refrigeration-controls-sensors/" class="sidebar-link">Controls &amp; Pressure Sensors</a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-group">
+          <div class="group-title">About This Documentation</div>
+          <ul class="sidebar-links">
+            <li><a href="/about/" class="sidebar-link">About This Resource</a></li>
+            <li><a href="/editorial-policy/" class="sidebar-link">Editorial Policy</a></li>
+            <li><a href="/contact/" class="sidebar-link">Technical Contact</a></li>
+          </ul>
+        </div>
+      </aside>
+
+      <!-- Main Documentation Article -->
+      <main id="main" class="doc-article">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <a href="/">Home</a>
+          <span>/</span>
+          <span class="current">Expansion Devices</span>
+        </nav>
+
+        <header class="doc-article-header">
+          <div class="doc-meta">
+            <span class="doc-badge">Metering Fluid Dynamics</span>
+            <time datetime="2026-11-20">Updated November 2026</time>
+          </div>
+          <h1 class="doc-title">Refrigeration Expansion Devices: TXV, EEV and Capillary Tube Engineering</h1>
+          <p class="doc-lede">
+            The expansion device marks the critical boundary separating the high-pressure liquid condensing side from the low-pressure evaporating side. It performs two simultaneous thermodynamic functions: dropping refrigerant pressure to lower its boiling saturation point and modulating the exact mass flow rate into the evaporator to match active thermal load.
+          </p>
+        </header>
+
+        <div class="doc-body">
+          <h2 id="thermodynamics-of-isenthalpic-expansion">Thermodynamics of Isenthalpic Expansion (Throttling)</h2>
+          <p>
+            When liquid refrigerant passes through a narrow restriction orifice without performing external shaft work ($W=0$) and with negligible heat exchange ($Q=0$), the process is adiabatic and isenthalpic ($h_1 = h_2$).
+          </p>
+          <div class="callout-definition">
+            <strong>Flash Gas Generation:</strong>
+            Because the downstream pressure is drastically lower, the saturation temperature drops below the liquid's current temperature. The excess sensible heat instantly causes a fraction of the liquid to flash into gas:
+            <div class="callout-formula">Flash Gas Fraction (x) = (h_inlet - h_f_evap) / h_fg_evap</div>
+            Typically, 15% to 25% of the liquid flashes into vapour. The latent heat extracted to produce this flash vapour chills the remaining 75% to 85% of liquid to the low evaporating temperature.
+          </div>
+
+          <h2 id="primary-expansion-technologies">Comparison of Expansion Technologies</h2>
+          <div class="table-responsive">
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">Device Category</th>
+                  <th scope="col">Operating Principle</th>
+                  <th scope="col">Superheat Modulation</th>
+                  <th scope="col">Typical Applications</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Capillary Tube</td>
+                  <td>Fixed copper micro-bore tube (0.6mm to 2.0mm ID) providing frictional pressure drop</td>
+                  <td>None (fixed resistance; self-balancing only over narrow load range)</td>
+                  <td>Domestic refrigerators, small freezers, room air conditioners</td>
+                </tr>
+                <tr>
+                  <td>Thermostatic Expansion Valve (TXV/TEV)</td>
+                  <td>Mechanical diaphragm balancing sensing bulb pressure against spring and evaporator pressure</td>
+                  <td>Dynamic mechanical modulation (maintains constant 4K–8K superheat)</td>
+                  <td>Commercial coolrooms, reach-in commercial cabinets, chilled display cases</td>
+                </tr>
+                <tr>
+                  <td>Electronic Expansion Valve (EEV)</td>
+                  <td>Direct-drive bipolar stepper motor positioning a micro-needle orifice (typically 500–2000 steps)</td>
+                  <td>Precision digital PID algorithm using pressure transducer &amp; suction thermistor</td>
+                  <td>Inverter heat pumps, variable refrigerant flow (VRF), modern supermarket racks</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2 id="mechanics-of-the-txv-three-acting-forces">Mechanics of the TXV: The Three Operating Forces</h2>
+          <p>
+            A mechanical thermostatic expansion valve positions its internal needle via a flexible stainless steel diaphragm subjected to three continuous forces:
+          </p>
+          <div class="callout-formula">P1 (Opening) = P2 (Closing) + P3 (Closing)</div>
+          <ul>
+            <li><strong>$P_1$ (Opening Force):</strong> Vapour pressure generated inside the thermal sensing bulb clamped to the evaporator outlet. As superheat rises (indicating warm suction gas), $P_1$ increases, pushing the diaphragm downward to open the orifice.</li>
+            <li><strong>$P_2$ (Closing Force):</strong> Evaporator refrigerant pressure acting on the underside of the diaphragm.</li>
+            <li><strong>$P_3$ (Closing Force):</strong> Mechanical superheat spring pressure adjusted manually by the technician via the bottom stem.</li>
+          </ul>
+
+          <h2 id="internal-vs-external-pressure-equalisation">Internal vs External Pressure Equalisation</h2>
+          <p>
+            In small single-circuit evaporators where refrigerant pressure drop across the coil is under 15 kPa, an <em>internally equalised</em> TXV measures evaporator pressure directly at the valve outlet.
+          </p>
+          <p>
+            In large commercial evaporators featuring distributor tubes and multiple circuit passes, friction creates a substantial pressure drop (often 30 kPa to 50 kPa) across the coil. An internal equalisation port would measure an artificially high pressure, causing the valve to starve the evaporator. An <em>externally equalised</em> TXV features an external 1/4" copper pilot line connected to the suction line downstream of the sensing bulb, ensuring accurate superheat calculation.
+          </p>
+
+          <h2 id="the-eev-advantage-in-modern-systems">The EEV Advantage: Precision &amp; Floating Head Pressure</h2>
+          <p>
+            Unlike mechanical TXVs which require at least 400 kPa pressure differential to operate predictably, Electronic Expansion Valves (EEVs) operate accurately even under low condensing head pressures during cool weather. This allows systems to run with "floating head pressure", drastically reducing compressor power consumption and increasing system <a href="/refrigeration-energy-efficiency/">energy efficiency</a>.
+          </p>
+
+
+          <h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
+          <h3>What is 'valve hunting'?</h3>
+          <p>
+            Hunting occurs when a TXV continuously overfeeds and underfeeds the evaporator in a cyclic wave. The valve opens wide, flooding liquid into the coil; the sensing bulb gets cold and snaps the valve shut, starving the coil until superheat spikes again. Hunting is caused by oversized valve orifices, incorrect bulb placement, or poor thermal contact.
+          </p>
+
+          <h3>Where should the TXV sensing bulb be mounted?</h3>
+          <p>
+            The bulb must be clamped securely to a horizontal run of clean copper suction pipe immediately after the evaporator outlet. For suction lines smaller than 7/8", mount at 1 o'clock or 2 o'clock. For larger lines (&gt;7/8"), mount at 4 o'clock or 8 o'clock. <em>Never mount a bulb at the bottom (6 o'clock)</em>, where accumulated oil acts as an insulator and gives false temperature readings.
+          </p>
+        </div>
+      </main>
+
+      <!-- In-Page TOC (Right Sidebar) -->
+      <aside class="doc-toc" aria-label="On this page">
+        <div class="toc-title">On This Page</div>
+        <ul class="toc-list">
+          <li><a href="#thermodynamics-of-isenthalpic-expansion">Isenthalpic Throttling</a></li>
+          <li><a href="#primary-expansion-technologies">Technology Comparison</a></li>
+          <li><a href="#mechanics-of-the-txv-three-acting-forces">Three TXV Forces</a></li>
+          <li><a href="#internal-vs-external-pressure-equalisation">External Equalisation</a></li>
+          <li><a href="#the-eev-advantage-in-modern-systems">EEV Precision</a></li>
+          <li><a href="#frequently-asked-questions">FAQs</a></li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="doc-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2026 Refrigeration Knowledge · Technical Refrigeration Engineering Education.</p>
+      <a href="/editorial-policy/" style="color:var(--text-muted); text-decoration:underline;">Documentation Standards</a>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js" defer></script>
+</body>
+</html>

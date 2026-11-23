@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Technical Inquiries & Errata · Refrigeration Knowledge</title>
+  <meta name="description" content="Submit technical feedback, propose thermodynamic documentation errata, or query engineering references on Refrigeration Knowledge.">
+  <link rel="canonical" href="https://refrigeration-knowledge.github.io/contact/">
+  <meta name="robots" content="index, follow">
+  <meta name="google-site-verification" content="d2XJ1FMgx_y7H5DfcTfY6zHwQ06f4dKEdD9PmR1FQhw">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact Refrigeration Knowledge",
+    "url": "https://refrigeration-knowledge.github.io/contact/"
+  }
+  </script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header class="doc-header">
+    <div class="container doc-header-inner">
+      <a href="/" class="brand-link">
+        <div class="brand-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10M6 10h10"/></svg>
+        </div>
+        <div>
+          <span class="brand-title">Refrigeration Knowledge</span>
+          <span class="brand-version">v2.4 Docs</span>
+        </div>
+      </a>
+      <nav class="doc-nav">
+        <ul class="nav-list">
+          <li><a href="/" class="nav-link">Docs</a></li>
+          <li><a href="/about/" class="nav-link">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container" style="max-width:850px; padding: 48px 24px 80px;">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span>/</span>
+      <span class="current">Contact</span>
+    </nav>
+
+    <h1 style="font-size:2.5rem; font-weight:800; color:var(--text-heading); margin-bottom:18px;">Technical Inquiries & Errata</h1>
+    <p class="doc-lede" style="margin-bottom:30px;">
+      We welcome technical dialogue from refrigeration mechanics, mechanical engineering educators, and students.
+    </p>
+
+    <div class="doc-body">
+      <div style="background:var(--surface-bg); border:1px solid var(--border-subtle); border-radius:6px; padding:28px; box-shadow:var(--shadow-card); margin-bottom:36px;">
+        <h2 style="font-size:1.3rem; margin-top:0; border:none; padding:0; color:var(--text-heading);">Submit Technical Errata or Documentation Query</h2>
+        <form style="display:flex; flex-direction:column; gap:16px; margin-top:18px;" onsubmit="event.preventDefault(); alert('Technical errata submission logged for engineering review.');">
+          <div>
+            <label for="tech-name" style="display:block; font-family:var(--font-mono); font-size:0.82rem; font-weight:700; margin-bottom:6px;">CONTRIBUTOR / ENGINEER NAME</label>
+            <input type="text" id="tech-name" required style="width:100%; padding:10px 14px; border:1px solid var(--border-subtle); border-radius:4px; font-size:1rem; font-family:inherit;">
+          </div>
+          <div>
+            <label for="tech-email" style="display:block; font-family:var(--font-mono); font-size:0.82rem; font-weight:700; margin-bottom:6px;">EMAIL ADDRESS</label>
+            <input type="email" id="tech-email" required style="width:100%; padding:10px 14px; border:1px solid var(--border-subtle); border-radius:4px; font-size:1rem; font-family:inherit;">
+          </div>
+          <div>
+            <label for="tech-cat" style="display:block; font-family:var(--font-mono); font-size:0.82rem; font-weight:700; margin-bottom:6px;">TOPIC CATEGORY</label>
+            <select id="tech-cat" style="width:100%; padding:10px 14px; border:1px solid var(--border-subtle); border-radius:4px; font-size:1rem; font-family:inherit; background:#fff;">
+              <option value="cycle">Thermodynamic Cycle Equations & P-h Diagrams</option>
+              <option value="components">Compressor / Heat Exchanger / TXV Mechanics</option>
+              <option value="controls">Instrumentation, Transducers & Control Sequences</option>
+              <option value="standards">ASHRAE / AIRAH / ARCTick Standards Reference</option>
+            </select>
+          </div>
+          <div>
+            <label for="tech-msg" style="display:block; font-family:var(--font-mono); font-size:0.82rem; font-weight:700; margin-bottom:6px;">TECHNICAL FEEDBACK & CITATIONS</label>
+            <textarea id="tech-msg" rows="5" required style="width:100%; padding:10px 14px; border:1px solid var(--border-subtle); border-radius:4px; font-size:1rem; font-family:inherit;"></textarea>
+          </div>
+          <button type="submit" class="sidebar-link active" style="align-self:flex-start; border:none; cursor:pointer; font-weight:700; padding:10px 20px; border-radius:4px;">DISPATCH TO EDITORIAL ENGINEERS</button>
+        </form>
+      </div>
+
+      <h2>Notice Regarding Emergency Repairs</h2>
+      <p>
+        Refrigeration Knowledge is an academic engineering reference. We do not provide consumer appliance dispatch or commercial service bookings.
+      </p>
+      <p>
+        For practical operational questions, please consult our engineering reference index on the <a href="/">Homepage</a> or review our <a href="/editorial-policy/">Documentation Standards</a>.
+      </p>
+    </div>
+  </div>
+
+  <footer class="doc-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2026 Refrigeration Knowledge · Technical Refrigeration Engineering Education.</p>
+      <a href="/editorial-policy/" style="color:var(--text-muted); text-decoration:underline;">Documentation Standards</a>
+    </div>
+  </footer>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

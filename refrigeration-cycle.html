@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Refrigeration Cycle Explained: Four Thermodynamic Stages · Refrigeration Knowledge</title>
+  <meta name="description" content="Understand the vapour-compression refrigeration cycle, refrigerant state changes, high and low pressure regimes, and the thermodynamic role of each component.">
+  <link rel="canonical" href="https://refrigeration-knowledge.github.io/refrigeration-cycle/">
+  <meta name="robots" content="index, follow">
+  <meta name="google-site-verification" content="d2XJ1FMgx_y7H5DfcTfY6zHwQ06f4dKEdD9PmR1FQhw">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="The Refrigeration Cycle Explained: Compressor, Condenser, Expansion Device, Evaporator">
+  <meta property="og:description" content="Detailed engineering breakdown of single-stage vapour compression thermodynamics, phase transitions, superheat, and subcooling.">
+  <meta property="og:url" content="https://refrigeration-knowledge.github.io/refrigeration-cycle/">
+  <meta property="og:site_name" content="Refrigeration Knowledge">
+  <meta property="og:image" content="https://refrigeration-knowledge.github.io/assets/images/thermo-components.svg">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Refrigeration Cycle Explained">
+  <meta name="twitter:description" content="Thermodynamic principles of the vapour-compression refrigeration cycle for HVAC-R students and engineers.">
+  <meta name="twitter:image" content="https://refrigeration-knowledge.github.io/assets/images/thermo-components.svg">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Docs Home", "item": "https://refrigeration-knowledge.github.io/" },
+          { "@type": "ListItem", "position": 2, "name": "Refrigeration Cycle", "item": "https://refrigeration-knowledge.github.io/refrigeration-cycle/" }
+        ]
+      },
+      {
+        "@type": "Article",
+        "headline": "The refrigeration cycle: how four components move heat",
+        "description": "Understand the vapour-compression refrigeration cycle, refrigerant state changes, pressure sides and the role of each main component.",
+        "image": "https://refrigeration-knowledge.github.io/assets/images/thermo-components.svg",
+        "inLanguage": "en-AU",
+        "mainEntityOfPage": "https://refrigeration-knowledge.github.io/refrigeration-cycle/",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Refrigeration Knowledge",
+          "url": "https://refrigeration-knowledge.github.io/"
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header class="doc-header">
+    <div class="container doc-header-inner">
+      <a href="/" class="brand-link" aria-label="Refrigeration Knowledge Home">
+        <div class="brand-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10M6 10h10"/></svg>
+        </div>
+        <div>
+          <span class="brand-title">Refrigeration Knowledge</span>
+          <span class="brand-version">v2.4 Docs</span>
+        </div>
+      </a>
+
+      <button class="mobile-toggle" aria-expanded="false" aria-controls="doc-sidebar-nav" aria-label="Toggle documentation navigation">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+
+      <nav class="doc-nav">
+        <ul class="nav-list">
+          <li><a href="/" class="nav-link">Docs</a></li>
+          <li><a href="/refrigeration-cycle/" class="nav-link active">Cycle Analysis</a></li>
+          <li><a href="/about/" class="nav-link">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="doc-layout">
+      <!-- Documentation Sidebar -->
+      <aside id="doc-sidebar-nav" class="doc-sidebar" aria-label="Documentation Tree">
+        <div class="sidebar-group">
+          <div class="group-title">Thermodynamic Cycle</div>
+          <ul class="sidebar-links">
+            <li><a href="/refrigeration-cycle/" class="sidebar-link active">Vapour-Compression Cycle</a></li>
+            <li><a href="/refrigeration-energy-efficiency/" class="sidebar-link">COP &amp; Energy Efficiency</a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-group">
+          <div class="group-title">Primary Components</div>
+          <ul class="sidebar-links">
+            <li><a href="/refrigeration-compressor/" class="sidebar-link">Compressors &amp; Pumping</a></li>
+            <li><a href="/condenser-vs-evaporator/" class="sidebar-link">Condensers vs Evaporators</a></li>
+            <li><a href="/refrigeration-expansion-devices/" class="sidebar-link">Expansion Devices (TXV/EEV)</a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-group">
+          <div class="group-title">Instrumentation &amp; Controls</div>
+          <ul class="sidebar-links">
+            <li><a href="/refrigeration-controls-sensors/" class="sidebar-link">Controls &amp; Pressure Sensors</a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-group">
+          <div class="group-title">About This Documentation</div>
+          <ul class="sidebar-links">
+            <li><a href="/about/" class="sidebar-link">About This Resource</a></li>
+            <li><a href="/editorial-policy/" class="sidebar-link">Editorial Policy</a></li>
+            <li><a href="/contact/" class="sidebar-link">Technical Contact</a></li>
+          </ul>
+        </div>
+      </aside>
+
+      <!-- Main Documentation Article -->
+      <main id="main" class="doc-article">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <a href="/">Home</a>
+          <span>/</span>
+          <span class="current">Refrigeration Cycle</span>
+        </nav>
+
+        <header class="doc-article-header">
+          <div class="doc-meta">
+            <span class="doc-badge">Technical Fundamentals · Australia</span>
+            <time datetime="2026-11-20">Updated November 2026</time>
+          </div>
+          <h1 class="doc-title">The refrigeration cycle: how four components move heat</h1>
+          <p class="doc-lede">
+            A refrigerator does not create cold in the way an electric heater creates warmth. It moves heat from a low-temperature cabinet to the higher-temperature surrounding space. In a standard vapour-compression system, a specialized refrigerant circulates continuously through four main components: the compressor, condenser, expansion device, and evaporator. Each component manipulates the refrigerant's pressure, temperature, or physical state so the system can continually transfer heat against its natural thermal gradient.
+          </p>
+        </header>
+
+        <div class="doc-body">
+          <div style="background:var(--canvas-bg); border:1px solid var(--border-subtle); border-radius:6px; padding:20px; margin-bottom:28px;">
+            <img src="assets/images/thermo-components.svg" alt="Schematic diagram of the vapour-compression refrigeration circuit" width="750" height="440" style="width:100%; height:auto; display:block; border-radius:4px;" fetchpriority="high">
+          </div>
+
+          <h2 id="heat-moves-around-a-closed-loop">The short version: heat moves around a closed loop</h2>
+          <p>
+            The evaporator absorbs heat from the refrigerated space. The compressor raises the pressure of the refrigerant vapour. The condenser rejects heat to the surrounding air or cooling medium and turns the vapour into liquid. The expansion device reduces pressure and meters refrigerant flow back towards the evaporator.
+          </p>
+          <p>
+            The refrigerant travels through sealed copper or aluminium pipework. It does not get consumed or depleted during normal operation. The system relies entirely on the refrigerant's ability to absorb significant amounts of latent heat as it evaporates at low pressure and release that latent heat as it condenses at elevated pressure.
+          </p>
+
+          <h2 id="follow-the-refrigerant-through-the-four-stages">Follow the refrigerant through the four stages</h2>
+          
+          <h3>1. Evaporator: absorb heat</h3>
+          <p>
+            After passing through the expansion device, refrigerant enters the evaporator at low pressure and low temperature, typically as an atomised liquid-vapour mixture (roughly 75% liquid, 25% flash gas). Heat from the cabinet air passes through the copper tube walls and aluminium fins into the refrigerant. The liquid boils vigorously at constant saturation temperature and transforms into vapour.
+          </p>
+          <p>
+            This is the useful cooling stage ($Q_{in}$). The evaporator does not make heat disappear; it collects heat from the space and transfers it into the circulating fluid. For deeper analysis of coil surface areas and fin pitch, see our chapter on <a href="/condenser-vs-evaporator/">Condensers vs Evaporators</a>.
+          </p>
+
+          <h3>2. Compressor: raise pressure and temperature</h3>
+          <p>
+            The compressor draws in low-pressure, cool refrigerant vapour from the suction line and compresses it. The refrigerant leaves the cylinder or scroll set at a much higher discharge pressure and discharge temperature. This mechanical pressure difference drives continuous circulation and allows the condenser to reject heat at a temperature well above the surrounding room ambient air.
+          </p>
+          <p>
+            Compressors are positive-displacement or dynamic pumps designed strictly for compressible vapour. Incompressible liquid entering a compressor causes catastrophic hydraulic valve destruction (slugging). Learn how pumping mechanisms and inverter drives operate in our guide on the <a href="/refrigeration-compressor/">Refrigeration Compressor</a>.
+          </p>
+
+          <h3>3. Condenser: reject heat and condense vapour</h3>
+          <p>
+            The hot, high-pressure superheated vapour enters the condenser coil. Ambient air (driven by a fan or natural convection) removes sensible heat until the refrigerant reaches its saturation temperature, at which point it condenses into a high-pressure liquid. The condenser rejects both the heat absorbed in the evaporator and the mechanical heat of compression ($Q_{out} = Q_{in} + W_{in}$).
+          </p>
+
+          <h3>4. Expansion device: reduce pressure and control flow</h3>
+          <p>
+            The high-pressure liquid passes through a metering restriction, such as a thermostatic expansion valve (TXV), electronic expansion valve (EEV), or fixed capillary tube. The device creates an abrupt pressure drop and meters the exact mass flow into the evaporator. As pressure plummets, the refrigerant's saturation temperature drops correspondingly, causing a fraction of liquid to flash into gas and chilling the remaining liquid mixture. Read our comprehensive technical explainer on <a href="/refrigeration-expansion-devices/">Refrigeration Expansion Devices</a>.
+          </p>
+
+          <h2 id="compare-the-refrigerant-conditions-around-the-loop">Compare the refrigerant conditions around the loop</h2>
+          <div class="table-responsive">
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">Station / Location</th>
+                  <th scope="col">Thermodynamic State</th>
+                  <th scope="col">Pressure Regime</th>
+                  <th scope="col">Operational Job</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Evaporator outlet / Compressor suction</td>
+                  <td>Low-temp vapour (3K–8K superheated)</td>
+                  <td>Low Side (e.g. 150 kPa for R134a)</td>
+                  <td>Carries absorbed cabinet heat towards the compressor suction port</td>
+                </tr>
+                <tr>
+                  <td>Compressor discharge / Condenser inlet</td>
+                  <td>Superheated hot gas (60°C–90°C)</td>
+                  <td>High Side (e.g. 1100 kPa for R134a)</td>
+                  <td>Establishes the thermal potential necessary to reject heat to ambient air</td>
+                </tr>
+                <tr>
+                  <td>Condenser outlet / Liquid line</td>
+                  <td>High-pressure liquid (2K–6K subcooled)</td>
+                  <td>High Side</td>
+                  <td>Delivers a bubble-free column of pure liquid to the metering expansion device</td>
+                </tr>
+                <tr>
+                  <td>Expansion device outlet / Evaporator inlet</td>
+                  <td>Cold saturated mixture (~20% flash vapour)</td>
+                  <td>Low Side</td>
+                  <td>Feeds the evaporator coils at a saturation temperature below cabinet air</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2 id="superheat-and-subcooling">Superheat and subcooling: two measurements technicians use</h2>
+          
+          <div class="callout-definition">
+            <strong>Superheat (K):</strong>
+            The sensible temperature rise of refrigerant vapour above its saturation boiling point at the measured suction pressure:
+            <div class="callout-formula">Superheat = T_measured_suction - T_saturation(P_suction)</div>
+            Adequate superheat (typically 4K to 8K at the evaporator bulb) ensures that zero liquid refrigerant leaves the evaporator to enter the compressor.
+          </div>
+
+          <div class="callout-definition">
+            <strong>Subcooling (K):</strong>
+            The sensible temperature reduction of liquid refrigerant below its saturation condensing point at the measured discharge pressure:
+            <div class="callout-formula">Subcooling = T_saturation(P_discharge) - T_measured_liquid_line</div>
+            Adequate subcooling (typically 3K to 6K) guarantees that the refrigerant does not prematurely boil into flash gas in liquid line pipework before reaching the TXV orifice.
+          </div>
+
+          <h2 id="why-pressure-changes-matter">Why pressure changes matter</h2>
+          <p>
+            A refrigerant's saturation temperature is directly coupled to its pressure via its vapour pressure curve. At reduced pressure, it boils at -5°C, easily absorbing heat from a +3°C milk container. At elevated pressure, its saturation temperature climbs to +45°C, allowing it to easily dump heat into a warm 30°C Australian kitchen.
+          </p>
+          <p>
+            The compressor maintains this essential pressure differential; the evaporator and condenser transfer heat across that boundary; and the expansion device meters the transition between high- and low-pressure sides. For overall system efficiency benchmarks and thermodynamic coefficient of performance (COP), read our analysis on <a href="/refrigeration-energy-efficiency/">Refrigeration Energy Efficiency</a>.
+          </p>
+
+
+          <h2 id="frequently-asked-questions">Frequently asked questions</h2>
+          <h3>Does the refrigerant get colder in the expansion valve?</h3>
+          <p>
+            Yes. As the refrigerant passes through the narrow valve orifice, its pressure drops abruptly. Because the process is isenthalpic (constant total energy), some of the liquid must vaporise instantly (flash gas). The latent heat needed for this flash boiling is drawn from the remaining liquid, causing its temperature to plummet to the low saturation point.
+          </p>
+
+          <h3>Which component actually generates the cooling effect?</h3>
+          <p>
+            Thermodynamically, cooling is the absence of heat. The evaporator absorbs heat from the cabinet air through latent vaporization. The compressor, condenser, and expansion device exist solely to return that heated refrigerant back into a low-temperature liquid state so the cycle can repeat indefinitely.
+          </p>
+
+          <h3>Why does the condenser coil feel hot to the touch?</h3>
+          <p>
+            The condenser rejects both the heat extracted from inside the refrigerator cabinet plus the mechanical and electrical energy added by the compressor motor windings during compression.
+          </p>
+
+          <h2 id="sources-and-references">Sources and authoritative engineering references</h2>
+          <ul>
+            <li><a href="https://handbook.ashrae.org/Handbooks/S24/SI/S24_Ch38/S24_Ch38_si.aspx" target="_blank" rel="noopener">ASHRAE Handbook — Fundamentals &amp; Systems (SI Edition)</a></li>
+            <li><a href="https://www.trane.com/commercial/north-america/us/en/about-us/newsroom/glossary/refrigeration-cycle.html" target="_blank" rel="noopener">Trane Commercial HVAC — The Vapour-Compression Cycle</a></li>
+            <li><a href="https://www.eaton.com/us/en-us/products/thermal-management-solutions/chillers/compressor-based-refrigeration-basics.html" target="_blank" rel="noopener">Eaton Engineering — Basics of Compressor-Based Refrigeration</a></li>
+            <li><a href="https://www.arctick.org/" target="_blank" rel="noopener">Australian Refrigeration Council (ARCTick) — Industry Standards</a></li>
+          </ul>
+        </div>
+      </main>
+
+      <!-- In-Page TOC (Right Sidebar) -->
+      <aside class="doc-toc" aria-label="On this page">
+        <div class="toc-title">On This Page</div>
+        <ul class="toc-list">
+          <li><a href="#heat-moves-around-a-closed-loop">Short Version</a></li>
+          <li><a href="#follow-the-refrigerant-through-the-four-stages">Four Cycle Stages</a></li>
+          <li><a href="#compare-the-refrigerant-conditions-around-the-loop">Refrigerant Conditions</a></li>
+          <li><a href="#superheat-and-subcooling">Superheat &amp; Subcooling</a></li>
+          <li><a href="#why-pressure-changes-matter">Why Pressure Matters</a></li>
+          <li><a href="#frequently-asked-questions">FAQs</a></li>
+          <li><a href="#sources-and-references">References</a></li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="doc-footer">
+    <div class="container footer-inner">
+      <div>
+        <p>&copy; 2026 Refrigeration Knowledge · Technical Refrigeration Engineering Education.</p>
+        <p style="font-size:0.82rem; margin-top:4px;">Licensed under Educational Documentation Guidelines. Compliant with Australian HVAC-R trade standards.</p>
+      </div>
+      <div>
+        <a href="/editorial-policy/" style="color:var(--text-muted); text-decoration:underline;">Documentation Standards</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
